@@ -1,13 +1,11 @@
 # coding: utf-8
 
-# import numpy as np
 import numpy as np
 import cv2
 import sys
 import open3d as o3d
 from pylibfreenect2 import Freenect2, SyncMultiFrameListener
 from pylibfreenect2 import FrameType, Registration, Frame
-from simpleicp import PointCloud, SimpleICP
 
 pic_counter = 0
 

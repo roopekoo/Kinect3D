@@ -94,12 +94,12 @@ int main()
 
         registration->apply(rgb, depth, &undistorted, &registered);
 
-        cv::Mat rgbMat = cv::Mat(
-            rgb->height, rgb->width,
-            CV_8UC4, rgb->data);
+        cv::Mat colorDepth = cv::Mat(
+            registered.height, registered.width,
+            CV_8UC4, registered.data);
 
         // Show current camera view depth+color view
-        cv::imshow("RGB", rgbMat);
+        cv::imshow("RGB+Depth", colorDepth);
         int key = cv::waitKey(1);
         // ENTER pressed->take a picture
         if (key == 13)

@@ -32,9 +32,9 @@ void depth2XYZ(libfreenect2::Registration *registration, libfreenect2::Frame *un
     pcl::PointCloud<pcl::PointXYZ> points;
     int height = undistorted->height;
     int width = undistorted->width;
-    for (int v=0; v < height; v++)
+    for (int v = 0; v < height; v++)
     {
-        for (int u=0; u < width; u++)
+        for (int u = 0; u < width; u++)
         {
             float X, Y, Z = 0;
             registration->getPointXYZ(undistorted, v, u, X, Y, Z);
@@ -48,7 +48,7 @@ void depth2XYZ(libfreenect2::Registration *registration, libfreenect2::Frame *un
     std::cout << pic_counter << std::endl;
     std::stringstream filename;
     filename << "XYZ_" << pic_counter;
-    write_file(points,filename.str());
+    write_file(points, filename.str());
 }
 
 int main()

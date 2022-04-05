@@ -6,10 +6,10 @@ typedef pcl::PointCloud<pcl::PointXYZ>::Ptr cloudPtr;
 
 void write_file(cloudPtr cloud, std::string filename)
 {
-    std::stringstream fullFileName;
-    fullFileName << filename << ".pcd";
-    pcl::io::savePCDFileASCII(fullFileName.str(), *cloud);
-    std::cout << fullFileName.str() << " pointcloud saved!" << std::endl;
+  std::stringstream fullFileName;
+  fullFileName << filename << ".pcd";
+  pcl::io::savePCDFileASCII(fullFileName.str(), *cloud);
+  std::cout << fullFileName.str() << " pointcloud saved!" << std::endl;
 }
 
 bool is_num(std::string numstr)
@@ -21,17 +21,17 @@ bool is_num(std::string numstr)
   while (i < str_len && isNum)
   {
     if (!std::isdigit(numstr[i]))
+    {
+      // Allow first decimal point but not a second one
+      if (numstr[i] == '.' && isFirstDot)
       {
-        // Allow first decimal point but not a second one
-        if (numstr[i] == '.' && isFirstDot)
-        {
-          isFirstDot = false;
-        }
-        else
-        {
-          isNum = false;
-        }
+        isFirstDot = false;
       }
+      else
+      {
+        isNum = false;
+      }
+    }
     i++;
   }
   return isNum;
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
       DEPTH_NEAR = atof(argv[i]);
     }
   }
-  //Read pcd file
+  // Read pcd file
   pcl::PCDReader reader;
   cloudPtr cloud(new pcl::PointCloud<pcl::PointXYZ>), cloud_f(new pcl::PointCloud<pcl::PointXYZ>);
   reader.read(argv[1], *cloud);
@@ -79,11 +79,11 @@ int main(int argc, char *argv[])
   cloudPtr cloudOut(new pcl::PointCloud<pcl::PointXYZ>);
   pass.setInputCloud(cloud);
   pass.setFilterFieldName("z");
-  pass.setFilterLimits(DEPTH_NEAR,DEPTH_FAR); // passthrough distances
+  pass.setFilterLimits(DEPTH_NEAR, DEPTH_FAR); // passthrough distances
   pass.filter(*cloudOut);
   std::cout << "Amount of points after passthrough filtering: " << cloudOut->size() << std::endl;
 
-  write_file(cloudOut,"DepthFiltered");
+  write_file(cloudOut, "DepthFiltered");
 
   return 0;
 }

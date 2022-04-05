@@ -53,7 +53,6 @@ int main(int argc, char *argv[])
     {
       if (!is_num(argv[i]))
       {
-        std::cout << argv[1] << std::endl;
         std::cout << "depthFar is not a decimal number!" << std::endl;
         return -1;
       }

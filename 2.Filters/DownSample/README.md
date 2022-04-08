@@ -12,9 +12,10 @@ Returns _Downsampled.pcd_ file
 
 ## Examples
 ./DownSample XYZ_0.pcd
-  - downsaples the pointcloud with 0.01 m voxel cube (1x1x1 cm^3)
+  - downsamples the point cloud with 0.01 m voxel cube (1x1x1 cm^3)
+
 ./DownSample XYZ_0.pcd 0.007
-  - downsaples the pointcloud with 0.007 m voxel cube (7x7x7 mm^3)
+  - downsamples the point cloud with 0.007 m voxel cube (7x7x7 mm^3)
 
 # Build and run
 1. `mkdir build`

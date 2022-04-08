@@ -6,4 +6,4 @@ It is suggested that you use the filters in the following order
 4. ClusterExtraction
 
 ## Requirements
-These filters only requires the *PCL* to be installed
+These filters only require the *PCL* to be installed

@@ -5,7 +5,7 @@ With this program, you can see the live image from the device. The image merges 
 Point the Kinect camera to a desired position and press ***ENTER*** to take a picture of the scene. A new point *.pcd* file will be created.
 You can take as many pictures as you want. The naming goes as follows: *XYZ_0.pcd*, *XYZ_1.pcd* etc.
 The outputted files are undistorted 3D point clouds without color information.
-you can quit the program by pressing the ***q*** key.
+You can quit the program by pressing the ***q*** key.
 
 
 ## Requirements

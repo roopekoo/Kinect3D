@@ -8,7 +8,7 @@ Outputs PlanarFiltered.pcd
 
 *filename* is required and defines the point cloud file to be read.
 
-*distanceToPlane* How far can the point be before not being included in the planar and being removed.
+*distanceToPlane* How far can the point be before not being included in the planar and removed.
 
 ## Examples
 ./PlanarFilter Downsampled_0.pcd

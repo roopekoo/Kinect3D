@@ -21,11 +21,11 @@ The output gives a merged point cloud called *merged.pcd*
 *PCL*
 
 # Build and run
-`mkdir build`
-`cd build`
-`cmake ..`
-`make`
-`./interactive_icp <stationaryCloud> <movableCloud> [iterations]`
+1. `mkdir build`
+2. `cd build`
+3. `cmake ..`
+4. `make`
+5. `./interactive_icp <stationaryCloud> <movableCloud> [iterations]`
 
 ## Examples
 `./interactive_icp file1.pcd file2.pcd`

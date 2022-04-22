@@ -1,5 +1,5 @@
 # Depth filter
-This is a simple passthrough filter that lets you filter out the points that do not belong to the given filter band.
+This simple passthrough filter lets you filter out the points that do not belong to the given filter band.
 This filters the z values of the points.
 
 `<required>`
@@ -8,7 +8,7 @@ This filters the z values of the points.
 
 *filename* is required and defines the point cloud file to be read.
 
-*depthFar* is the farthest distance value that a point can have without being filtered.
+*depthFar* is the farthest distance value a point can have without being filtered.
   
 *depthNear* is the smallest value the point can have without being filtered out.
 

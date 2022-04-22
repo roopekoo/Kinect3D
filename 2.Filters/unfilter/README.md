@@ -19,7 +19,7 @@ Also, make sure that the input cloud is from the background cloud; otherwise, we
 
 ## Examples
 ./unfilter cloud_cluster_0.pcd XYZ_0.pcd
-- Restores the points from XYZ_0.pcd with a search radius of 0.02 m
+- Restores the points from XYZ_0.pcd with a default search radius of 0.02 m
 
 ./unfilter cloud_cluster_0.pcd XYZ_0.pcd 0.03
 - Restores the points from XYZ_0.pcd with a search radius of 0.03 m

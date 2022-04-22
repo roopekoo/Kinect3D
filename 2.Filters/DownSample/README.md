@@ -1,6 +1,6 @@
 # Downsampler
 This filter averages the points in the point cloud in a 3D voxel grid.
-Returns _Downsampled.pcd_ file
+Returns _Downsampled.pcd_ file.
 
 `<required>`
 
